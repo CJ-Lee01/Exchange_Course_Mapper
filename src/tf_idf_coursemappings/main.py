@@ -1,6 +1,10 @@
 import json
 from tf_idf_spare_cov import TfIdfMapper
 
+if __name__ == '__main__':
+    # for me to conveniently run on PyCharm
+    pass
+
 test_set = [
     (
         'CS3230',
