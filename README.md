@@ -12,7 +12,7 @@ Dependencies:
   - ```[ [course_code, course_description], [course_code, course_description], [course_code, course_description], ... ]```
   - The model trains using the course description
 - Copy the information to train on into the file `src/main/TRAIN`
-- Modify the array in the `src/main/main.py`, following the same format as the example given in the program.
+- Add the course code and the course details to `src/main/TEST` in the same structure as seen in `src/main/example_TEST`
 - Run the `main.py` file. I cannot get it to run from the terminal for some reason, so now I am using PyCharm to run it.
 
 ## Work(s) in Progress
