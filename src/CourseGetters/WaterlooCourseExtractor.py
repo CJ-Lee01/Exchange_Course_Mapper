@@ -1,6 +1,9 @@
 import json
 import re
 
+if __name__ == '__main__':
+    pass
+
 with open('./RAW_WATERLOO', 'r') as raw_waterloo:
     s = raw_waterloo.read()
 

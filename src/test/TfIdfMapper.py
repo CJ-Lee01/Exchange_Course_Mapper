@@ -1,5 +1,8 @@
 from src.tf_idf_coursemappings.tf_idf_spare_cov import TfIdfMapper
 
+if __name__ == '__main__':
+    pass
+
 training_set = [
     (
         'CS2109S',

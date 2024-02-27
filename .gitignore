@@ -158,3 +158,11 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
+
+
+# Raw data files in my computer
+**/TEST
+**/TRAIN
+**/RAW_WATERLOO
+**/Waterloo_Course_List
+**/NUS_Course_List

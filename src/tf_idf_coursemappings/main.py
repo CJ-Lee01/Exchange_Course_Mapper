@@ -21,11 +21,19 @@ test_set = [
     (
         'CS4243',
         'This course is for undergraduates who are interested in computer vision and its applications. It covers (a) the basic skills needed in handling images and videos, (b) the basic theories needed to understand geometrical computer vision, and (c) pattern recognition. Topics covered in image handling include: contrast stretch, histogram equalization, noise removal, and color space. Topics covered in geometrical vision include: affine transform, vanishing points, camera projection models, homography, camera calibration, rotation representations including quaternions, epipolar geometry, binocular stereo, structure from motion. Topics covered for pattern recognition include principal component analysis'
+    ),
+    (
+        'CS2107',
+        'This course serves as on information security. secure  and implementation. Topics covered include classical/historical ciphers, modern ciphers and cryptosystems, ethical, legal and organisational aspects, classic examples of direct attacks on computer systems such as input validation vulnerability, examples of other forms of attack such as social engineering/phishing attacks, and the practice of secure programming'
+    ),
+    (
+        'CS3223',
+        'This system-oriented course provides an in-depth study of the concepts and implementation issues related to database management systems. It first covers the physical implementation of the relational data model, which includes storage management, access methods, query processing, and optimisation. Then it covers issues and techniques dealing with multi-user application environments, namely, transactions, concurrency control, and recovery. The third part covers advanced topics such as on-line analytical processing, in-memory databases, and column stores'
     )
 
 ]
 
-with open('TRAIN', 'r') as trn_data:
+with open('../main/TRAIN', 'r') as trn_data:
     temp = json.loads(trn_data.read())
     training_set = [tuple(t) for t in temp]
 

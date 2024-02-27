@@ -1,20 +1,19 @@
 import math
 
 import numpy as np
-from typing import Iterable, Tuple, List, Dict
+from typing import Iterable, Tuple, List
 
-from nltk.tokenize import wordpunct_tokenize
-
-from IMapper import IMapper
+from .IMapper import IMapper
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 class TfIdfMapper(IMapper):
 
-    def __init__(self):
-        self.vectorizer: TfidfVectorizer = TfidfVectorizer(sublinear_tf=True, stop_words='english')
+    def __init__(self, max_df =1, top_n=5):
+        self.vectorizer: TfidfVectorizer = TfidfVectorizer(sublinear_tf=True, stop_words='english', max_df=max_df)
         self.course_code_lst: np.ndarray | None = None
         self.course_vector: np.ndarray | None = None
+        self.top_N = top_n
 
     def train_modules(self, module_lst: Iterable[Tuple[str, str]]):
         course_details_lst = []
@@ -33,9 +32,9 @@ class TfIdfMapper(IMapper):
             course_detail_lst.append(detail)
         course_vector = self.vectorizer.transform(course_detail_lst).toarray()
         result: np.ndarray = course_vector @ self.course_vector.T
-        similarity_courses: np.ndarray = result.argpartition(-5, axis=1)[:, -5:]
-        result.partition(-5, axis=1)
-        scores = result[:, -5:].round(5)
+        similarity_courses: np.ndarray = result.argpartition(-self.top_N, axis=1)[:, -self.top_N:]
+        result.partition(-self.top_N, axis=1)
+        scores = result[:, -self.top_N:].round(5)
         ret = list(zip(course_code_lst, self.course_code_lst[similarity_courses], scores))
         ret_2 = []
         for code, lst, scores in ret:
