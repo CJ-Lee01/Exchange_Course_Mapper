@@ -6,7 +6,7 @@ It displays the best 5 matches for each course based on the description of the c
 Dependencies:
 - Sklearn
 - Numpy
-
+- Requests
 ## Guide
 - Use the CourseGetters folder to extract course information into the JSON format with the following format:
   - ```[ [course_code, course_description], [course_code, course_description], [course_code, course_description], ... ]```
