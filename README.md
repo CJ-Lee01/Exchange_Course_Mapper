@@ -20,4 +20,6 @@ Dependencies:
 - Getting it to run from the terminal. I still get the err: `from src.tf_idf_coursemappings.tf_idf_spare_cov import TfIdfMapper
 ModuleNotFoundError: No module named 'src'`
 - (Very low priority) Adding other algorithms which I find interesting.
-`
+
+## Caveats
+- If the course description is vague, and there is no outline of the topics that is taught in the course, this program cannot match the course well.
