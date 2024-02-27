@@ -18,6 +18,6 @@ Dependencies:
 ## Work(s) in Progress
 - I am currently confused by Python packages, and therefore the folder structure is not as nice at the moment. Once I get the hang of Python packages, the process will be more streamlined.
 - Getting it to run from the terminal. I still get the err: `from src.tf_idf_coursemappings.tf_idf_spare_cov import TfIdfMapper
-ModuleNotFoundError: No module named 'src'
+ModuleNotFoundError: No module named 'src'`
 - (Very low priority) Adding other algorithms which I find interesting.
 `
