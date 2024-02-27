@@ -1,7 +1,7 @@
 # Exchange_Course_Mapper
 Using NLP techniques learned in CS4248 to determine similarity of courses between 2 exchange universities.
 
-It displays the best 5 matches for each course based on the description of the course.
+It displays the best 10 matches for each course based on the description of the course.
 
 Dependencies:
 - Sklearn
