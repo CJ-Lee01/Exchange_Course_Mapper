@@ -1,4 +1,4 @@
-from src.main.test_parser import parse_text
+from test_parser import parse_text
 from src.tf_idf_coursemappings.tf_idf_spare_cov import TfIdfMapper
 import json
 
@@ -19,4 +19,7 @@ mappings = mapper.get_course_mappings(test_set)
 
 for course, course_maps in mappings:
     print(course)
-    print('\t', course_maps)
+    for c, score in course_maps:
+        print('\t', f'similarity: {score}', c)
+        print('')
+    print("\n\n")
