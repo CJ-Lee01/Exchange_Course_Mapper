@@ -4,7 +4,7 @@ import re
 if __name__ == '__main__':
     pass
 
-with open('./RAW_WATERLOO', 'r') as raw_waterloo:
+with open('RawData/RAW_WATERLOO', 'r') as raw_waterloo:
     s = raw_waterloo.read()
 
 
@@ -26,6 +26,6 @@ def text_to_format(s: str):
 
 course_lst = [text_to_format(s) for s in course_lst if s.strip() != '']
 
-with open('./Waterloo_Course_List', 'w') as course_list:
+with open('../CourseData/UWaterloo', 'w') as course_list:
     json.dump(course_lst, fp=course_list)
 

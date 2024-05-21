@@ -6,9 +6,8 @@ import json
 
 """
 Format:
-JSON file with the 2 attributes:
-'course_code'
-'course_details'
+JSON file in the format of 2d array
+[[course code 1, course details], [course code 2, course details], ...]
 """
 if __name__ == '__main__':
     pass
@@ -18,7 +17,7 @@ EXCLUDED_COURSES = {
 }
 
 try:
-    with open('./NUS_Course_List', 'r') as course_list:
+    with open('../CourseData/NUS', 'r') as course_list:
         course_list = json.loads(course_list.read())
 
 except (FileNotFoundError, JSONDecodeError):
@@ -29,5 +28,5 @@ except (FileNotFoundError, JSONDecodeError):
         if re.findall('[A-Z]+', course['moduleCode'])[0] in EXCLUDED_COURSES :
             continue
         courses_list.append((course['moduleCode'], course['description']))
-    with open('./NUS_Course_List', 'w') as course_list:
+    with open('../CourseData/NUS', 'w') as course_list:
         json.dump(courses_list, fp=course_list)

@@ -1,5 +1,3 @@
-import math
-
 import numpy as np
 from typing import Iterable, Tuple, List
 
@@ -9,8 +7,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 class TfIdfMapper(IMapper):
 
-    def __init__(self, max_df =1, top_n=5):
-        self.vectorizer: TfidfVectorizer = TfidfVectorizer(sublinear_tf=True, stop_words='english', max_df=max_df)
+    def __init__(self, *, max_df=1, top_n=5, ngram_range=(1, 1)):
+        self.vectorizer: TfidfVectorizer = TfidfVectorizer(sublinear_tf=True, stop_words='english', max_df=max_df, ngram_range=ngram_range)
         self.course_code_lst: np.ndarray | None = None
         self.course_vector: np.ndarray | None = None
         self.top_N = top_n

@@ -161,10 +161,7 @@ cython_debug/
 
 
 # Raw data files in my computer
-**/TEST
-**/TRAIN
-**/RAW_WATERLOO
-**/Waterloo_Course_List
-**/NUS_Course_List
-**/RESULT
 STORAGE/
+CourseData/*
+RawData/*
+
